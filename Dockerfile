@@ -6,6 +6,7 @@ RUN apt-get install -q -y \
       qt5-default \
       xvfb \
       nodejs \
+      npm \
       python-dev
 
 RUN curl -O https://bootstrap.pypa.io/get-pip.py
