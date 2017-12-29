@@ -11,11 +11,3 @@ RUN apt-get install -q -y \
 RUN curl -O https://bootstrap.pypa.io/get-pip.py
 RUN python get-pip.py
 RUN pip install awscli --upgrade
-
-RUN echo 'UTC' > /etc/timezone
-RUN dpkg-reconfigure -f noninteractive tzdata
-
-RUN echo 0.0.0.0 www.washos.test | tee -a /etc/hosts
-RUN echo 0.0.0.0 manage.washos.test | tee -a /etc/hosts
-RUN echo 0.0.0.0 api.washos.test | tee -a /etc/hosts
-RUN echo 0.0.0.0 vendors.washos.test | tee -a /etc/hosts
