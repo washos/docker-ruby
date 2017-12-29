@@ -7,6 +7,10 @@ RUN apt-get install -q -y \
       xvfb \
       nodejs \
       python-dev
+
 RUN curl -O https://bootstrap.pypa.io/get-pip.py
 RUN python get-pip.py
 RUN pip install awscli --upgrade
+
+RUN echo 'UTC' > /etc/timezone
+RUN dpkg-reconfigure -f noninteractive tzdata
