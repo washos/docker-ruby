@@ -2,8 +2,11 @@ FROM ruby:2.3.5
 
 RUN apt-get update -q -y
 RUN apt-get install -q -y \
-      libqt5webkit5-dev \
       qt5-default \
+      libqt5webkit5-dev \
+      gstreamer1.0-plugins-base \
+      gstreamer1.0-tools \
+      gstreamer1.0-x \
       xvfb \
       nodejs \
       python-dev
