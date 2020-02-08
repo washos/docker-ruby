@@ -1,4 +1,4 @@
-FROM ruby:2.4.9
+FROM circleci/ruby:2.5.7-node-browsers
 
 RUN apt-get update -q -y
 RUN apt-get install -q -y \
