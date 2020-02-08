@@ -1,5 +1,7 @@
 FROM circleci/ruby:2.4.9-node-browsers
 
+USER root
+
 RUN apt-get update -q -y
 RUN apt-get install -q -y \
       qt5-default \
@@ -14,3 +16,5 @@ RUN apt-get install -q -y \
 RUN curl -O https://bootstrap.pypa.io/get-pip.py
 RUN python get-pip.py
 RUN pip install awscli --upgrade
+
+USER circleci
