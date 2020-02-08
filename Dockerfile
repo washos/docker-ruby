@@ -1,4 +1,4 @@
-FROM ruby:2.4.9
+FROM ruby:2.6.5-node-browsers
 
 RUN apt-get update -q -y
 RUN apt-get install -q -y \
